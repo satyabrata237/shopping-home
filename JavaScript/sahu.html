@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+    <script>
+        function bodyload(){
+            window.document.images[0].src="../images/android.jpg";
+            window.document.forms[0].elements[1].value = "Register";
+            window.document.forms[1].elements[1].value = "Login";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img src="" height="100px" width="150px" alt="">
+    </div>
+    <div>
+        <form action="">
+            <h3>Register Name</h3>
+            <input type="text">
+            <input type="button">
+        </form>
+        <form action="">
+            <h3>User Login</h3>
+            <input type="text">
+            <input type="button">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loadimg</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrqap.css">\
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function LoadClick(){
+     pic = document.createElement("img");
+            pic.src="../images/banner1.jpg";
+            pic.hight ="300";
+            pic.width ="500";
+            pic.boder ="1";
+            document.getElementById("container").appendChild(pic);
+        }
+    </script>
+</head>
+<body onclick="LoadClick()">
+    <button style="background-color: aqua;">Lood image</button>
+    <div id="container" style="text-align: center;">
+
+    </div>
+</body>
+</html>

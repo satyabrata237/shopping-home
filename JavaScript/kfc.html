@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC Order</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function bodyload(){
+            result =document.getElementsByTagName("div");
+            alert("how meny DIVs Are there" + result.length);
+        }
+    </script>
+</head>
+<body onload="bodyload()" class="container.fluid">
+    <button  class="btn btn-info">Click</button>
+    <header>
+        <img src="../images/banner1.jpg" height="250px" width="100%" alt="">
+    </header>
+    <section>
+        <div class="accordion" id="orderFrom">
+            <div class="accordion-item">
+                <div class="acordion-header">
+                    <button class="btn-danger w-100" data-bs-target="collaps" data-bs-target="#customer">
+                        <h3>customer Details</h3>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+</body>
+</html>

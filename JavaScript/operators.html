@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function loadProduct(id){
+         fetch(`https://fakestoreapi.com/products/${id}`).then(function(response){
+            return response.json();
+         })
+         .then(function(data){
+            document.getElementById("pic").src= data.image;
+            document.getElementById("title").innerHTML = data.title;
+            document.getElementById("description").innerHTML = data.description;
+            document.getElementById("tag").innerHTML = `<h4> $ ${data.price}</h4>`
+         })   
+        }
+        function bodyload(){
+            loadProduct(1);
+        }
+        var count = 1;
+        function nextClick(){
+            count++;
+            loadProduct(count);
+        }
+        function previousClick(){
+            count--;
+            loadProduct(count);
+        }
+    </script>
+    <style>
+        #tag{
+            width: 150px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 20px;
+            top: 100px;
+            right: 100px;
+            background-color: green;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }  
+    </style>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <div id="tag">
+
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="card mt-3 w-50">
+            <img src="" id="pic" height="300px" class="card-img-top" alt="">
+            <div class="card-header text-center">
+                <h4 id="title"></h4>
+            </div>
+            <div class="card-body" style="height: 140px; overflow: auto;">
+                <p id="description"></p>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-outline-danger" onclick="previousClick()">
+                    <span class="bi bi-chevron-bar-left"></span>
+                </button>
+                <button class="btn btn-outline-danger" onclick="nextClick()">
+                    <span class="bi bi-chevron-bar-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+</body>
+</html>

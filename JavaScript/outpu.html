@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        function deleteClick(){
+            flag = confirm("confirm Delete:Record Delete.\nAre you Secore");
+            if(flag==true){
+                document.write("Record Deleted<br>");
+            }else{
+                alert("You Canceled..");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Click this Delite Button</h2>
+    <button onclick="deleteClick()">Delete</button>
+</body>
+</html>
